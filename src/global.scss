@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+$all-pokemons: #3E75C3;
+$normal: #909090;
+$fighting: #C44D61;
+$flying: #758CBD;
+$poison: #AC6ACA;
+$ground: #CE8056;
+$rock: #84BEB3;
+$bug: #9BBA48;
+$ghost: #616EB7;
+$steel: #6594A1;
+$fire: #E96303;
+$water: #4F77BE;
+$grass: #73B861;
+$electric: #D4BC34;
+$psychic: #EB8B85;
+$ice: #71BAAC;
+$dragon: #2C6AC1;
+$dark: #595761;
+$fairy: #E296E1;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.all-pokemons{
+    background: $all-pokemons;
+}
+.normal{
+    background: $normal;
+}
+.fighting{
+    background: $fighting;
+}
+.flying{
+    background: $flying;
+}
+.poison{
+    background: $poison;
+}
+.ground{
+    background: $ground;
+}
+.rock{
+    background: $rock;
+}
+.bug{
+    background: $bug;
+}
+.ghost{
+    background: $ghost;
+}
+.steel{
+    background: $steel;
+}
+.fire{
+    background: $fire;
+}
+.water{
+    background: $water;
+}
+.grass{
+    background: $grass;
+}
+.electric{
+    background: $electric;
+}
+.psychic{
+    background: $psychic;
+}
+.dragon{
+    background: $dragon;
+}
+.dark{
+    background: $dark;
+}
+.fairy{
+    background: $fairy;
+}
