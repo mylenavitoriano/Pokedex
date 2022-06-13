@@ -3,11 +3,13 @@
 .pokemons{
     max-width: 1020px;
     display: grid;
-    grid-template-columns: repeat(2, 500px);
+    grid-template-columns: repeat(2, 450px);
     gap: 20px;
+    justify-content: center;
+    margin: 0 auto;
 
     .pokemon{
-        width: 500px;
+        width: 450px;
         height: 205px;
         display: grid;
         grid-template-columns: auto 250px;
@@ -22,13 +24,13 @@
             width: 100%;
 
             p{
-                font-size: 22px;
+                font-size: 18px;
                 color: rgba(255, 255, 255, 0.2);
                 margin: 0;
             }
 
             h2{
-                font-size: 32px;
+                font-size: 24px;
                 color: #fff;
                 margin-top: -5px;
             }

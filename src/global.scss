@@ -26,6 +26,57 @@ $fairy: #E296E1;
     box-sizing: border-box;
 }
 
+.inicio{
+    height: 90vh;
+    
+
+    .elements{
+        background: #FD1717;
+        height: 60%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        .logo{
+            width: 300px;
+            position: relative;
+            top: 60px
+        }
+
+        .pokeball{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            top: 100px;
+            animation: pokeball 5s ease-in-out infinite;
+
+            .luzes{
+                width: 100px;
+            }
+
+            img{
+                width: 400px;
+            }
+        }
+    }
+}
+
+@keyframes pokeball {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
 .all-pokemons{
     background: $all-pokemons;
 }

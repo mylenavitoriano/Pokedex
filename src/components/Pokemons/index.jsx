@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { render } from 'react-dom'
 import './styles.scss'
 
 export function Pokemons(){
@@ -49,6 +50,6 @@ export function Pokemons(){
 
             <button className='btn-load-more' onClick={() => loadPokemons()}>Load More</button>
         </div>
-
     )
+    
 }
