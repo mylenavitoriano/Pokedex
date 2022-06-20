@@ -27,7 +27,7 @@ $fairy: #E296E1;
 }
 
 .inicio{
-    height: 90vh;
+    height: 80vh;
     
 
     .elements{
@@ -42,7 +42,7 @@ $fairy: #E296E1;
         .logo{
             width: 300px;
             position: relative;
-            top: 60px
+            top: 85px
         }
 
         .pokeball{
@@ -51,15 +51,112 @@ $fairy: #E296E1;
             align-items: center;
             justify-content: center;
             position: relative;
-            top: 100px;
+            top: 150px;
             animation: pokeball 5s ease-in-out infinite;
 
             .luzes{
-                width: 100px;
+                width: 200px;
             }
 
             img{
-                width: 400px;
+                width: 600px;
+            }
+        }
+    }
+}
+
+.conteudo{
+    display: flex;
+    max-width: 1350px;
+    margin: 0 auto;
+    justify-content: center;
+
+    .types{
+        
+        .type{
+            display: flex;
+            align-items: center;
+            height: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            padding: 0 14px;
+            cursor: pointer;
+            width: fit-content;
+            border: 0;
+
+            & + .type{
+                margin-top: 1rem;
+            }
+
+            &:hover{
+                background: #DBDBDB;
+                border-radius: 10px;
+
+                img{
+                    filter: grayscale(0);
+                }
+
+                .type-all-pokemons{
+                    color: $all-pokemons;
+                }
+                .type-normal{
+                    color: $normal;
+                }
+                .type-fighting{
+                    color: $fighting;
+                }
+                .type-flying{
+                    color: $flying;
+                }
+                .type-poison{
+                    color: $poison;
+                }
+                .type-ground{
+                    color: $ground;
+                }
+                .type-rock{
+                    color: $rock;
+                }
+                .type-bug{
+                    color: $bug;
+                }
+                .type-ghost{
+                    color: $ghost;
+                }
+                .type-steel{
+                    color: $steel;
+                }
+                .type-fire{
+                    color: $fire;
+                }
+                .type-water{
+                    color: $water;
+                }
+                .type-grass{
+                    color: $grass;
+                }
+                .type-electric{
+                    color: $electric;
+                }
+                .type-psychic{
+                    color: $psychic;
+                }
+                .type-dragon{
+                    color: $dragon;
+                }
+                .type-dark{
+                    color: $dark;
+                }
+                .type-fairy{
+                    color: $fairy;
+                }
+            }
+
+            img{
+                margin-right: 15px;
+                filter: grayscale(100%);
+
+                
             }
         }
     }
@@ -122,6 +219,9 @@ $fairy: #E296E1;
 .psychic{
     background: $psychic;
 }
+.ice{
+    background: $ice;
+}
 .dragon{
     background: $dragon;
 }
@@ -131,3 +231,4 @@ $fairy: #E296E1;
 .fairy{
     background: $fairy;
 }
+

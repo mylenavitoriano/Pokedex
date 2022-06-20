@@ -6,7 +6,7 @@
     grid-template-columns: repeat(2, 450px);
     gap: 20px;
     justify-content: center;
-    margin: 0 auto;
+    margin-left:12.5rem;
 
     .pokemon{
         width: 450px;
@@ -65,8 +65,8 @@
             z-index: 1;
 
             img{
-                max-width: 60%;
-                max-height: 180px;
+                max-width: 80%;
+                max-height: 200px;
                 padding-bottom: 40px;
                 z-index: 99;
             }
