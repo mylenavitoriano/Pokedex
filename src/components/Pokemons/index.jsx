@@ -64,7 +64,7 @@ export function Pokemons({type}){
 
                         <div className='types'>
                             {item.types.map((item, index) => (
-                                <img src={`./src/assets/icons/icon-types-black/${item.type.name}.svg`} alt="" key={index}/>
+                                <img src={`/src/assets/icons/icon-types-black/${item.type.name}.svg`} alt="" key={index}/>
                             ))}
                         </div>
                     </div>

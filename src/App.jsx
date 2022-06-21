@@ -40,10 +40,10 @@ function selectType(typeName){
     <main>
       <div className='inicio'>
         <div className='elements'>
-          <img src="./src/assets/images/logo.svg" alt="" className='logo'/>
+          <img src="/src/assets/images/logo.svg" alt="" className='logo'/>
           <div className='pokeball'>
-            <img src="src/assets/images/luzes.svg" alt="" className='luzes'/>
-            <img src="src/assets/images/img-pokeball.svg" alt="" />
+            <img src="/src/assets/images/luzes.svg" alt="" className='luzes'/>
+            <img src="/src/assets/images/img-pokeball.svg" alt="" />
           </div>
         </div>
       </div>
@@ -51,13 +51,13 @@ function selectType(typeName){
       <div className="conteudo">
         <div className='types'>
           <button className='type' onClick={() => selectType(`all`)}>
-              <img src="./src/assets/icons/icon-types/all-pokemons.svg" alt="" />
+              <img src="/src/assets/icons/icon-types/all-pokemons.svg" alt="" />
               <p className='type-all-pokemons'>All</p>
           </button>
 
           {allTypes.map((item, index) => (
               <button className={item.name == type ? 'type active' : 'type'} key={index} onClick={() => selectType(item.name)}>
-                  <img src={`src/assets/icons/icon-types/${item.name}.svg`} alt="" />
+                  <img src={`/src/assets/icons/icon-types/${item.name}.svg`} alt="" />
                   <p className={`type-${item.name}`}>{item.name[0].toUpperCase() + item.name.substring(1)}</p>
               </button>
           ))}
