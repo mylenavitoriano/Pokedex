@@ -4,10 +4,26 @@ import './styles.scss'
 export function Pokemons({type}){
 
     const [allPokemons, setAllPokemons] = useState([])
-    const [loadMore, setLoadMore] = useState('https://pokeapi.co/api/v2/pokemon?limit=20')
+    const [loadMore, setLoadMore] = useState('https://pokeapi.co/api/v2/pokemon?offset=20&limit=40')
     const [control, setControl] = useState(0)
 
     const loadPokemons = async () => {
+        const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=20')
+        const data = await res.json()
+
+        const createPokemonObject = (result) =>{
+            result.forEach( async (poke) => {
+                const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${poke.name}`)
+                const data = await res.json()
+                
+                setAllPokemons(currentList => [...currentList, data])
+            })
+        }
+
+        createPokemonObject(data.results)
+    }
+
+    const loadMorePokemons = async () => {
         const res = await fetch(loadMore)
         const data = await res.json()
 
@@ -41,14 +57,15 @@ export function Pokemons({type}){
     }
 
     useEffect(() => {
-        if(type != 'all'){
-            loadPokemonsType()
-            setControl(1)
-        }else{
+        if(type == 'all'){
+            console.log(loadMore)
             loadPokemons()
+        }else{
+            
+            loadPokemonsType()
         }
 
-        //setAllPokemons(currentList => [ ...currentList.slice(0, -1)])
+        setAllPokemons(currentList => [ ...currentList.slice(0, 0)])
         
     }, [type])
 
@@ -74,7 +91,7 @@ export function Pokemons({type}){
                 </div>
             )) : ''}
 
-            {type == 'all' && <button className='btn-load-more' onClick={type != "all" ? () => loadPokemonsType()  : () => loadPokemons()}>Load More</button>}
+            {type == 'all' && <button className='btn-load-more' onClick={() => loadMorePokemons()}>Load More</button>}
         </div>
     )
     

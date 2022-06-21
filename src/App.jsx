@@ -50,7 +50,7 @@ function selectType(typeName){
 
       <div className="conteudo">
         <div className='types'>
-          <button className='type' onClick={() => selectType(`all`)}>
+          <button className={type == "all" ? 'type active' : 'type'} onClick={() => selectType(`all`)}>
               <img src="/src/assets/icons/icon-types/all-pokemons.svg" alt="" />
               <p className='type-all-pokemons'>All</p>
           </button>
