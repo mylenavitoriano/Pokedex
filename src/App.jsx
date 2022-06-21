@@ -56,7 +56,7 @@ function selectType(typeName){
           </button>
 
           {allTypes.map((item, index) => (
-              <button className='type' key={index} onClick={() => selectType(item.name)}>
+              <button className={item.name == type ? 'type active' : 'type'} key={index} onClick={() => selectType(item.name)}>
                   <img src={`src/assets/icons/icon-types/${item.name}.svg`} alt="" />
                   <p className={`type-${item.name}`}>{item.name[0].toUpperCase() + item.name.substring(1)}</p>
               </button>

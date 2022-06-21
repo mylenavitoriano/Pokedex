@@ -68,7 +68,7 @@ $fairy: #E296E1;
 .conteudo{
     display: flex;
     max-width: 1350px;
-    margin: 0 auto;
+    margin: 0 auto 5rem;
     justify-content: center;
 
     .types{
@@ -88,7 +88,7 @@ $fairy: #E296E1;
                 margin-top: 1rem;
             }
 
-            &:hover{
+            &:hover, .type.active{
                 background: #DBDBDB;
                 border-radius: 10px;
 
